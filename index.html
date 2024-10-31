@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazarillo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/bin/LazarilloIconBlack.png"/>
+  </head>
+
+  <body>
+
+    <!--Titulo,Filtros y Buscador-->
+
+    <section class="header">
+      <div class="title-header">
+        <a href="/main/index.html" class="navbar-brand">
+          <img src="/bin/LazarilloIconWhite.png" class="rounded" alt="Lazarillo" height="100px" width="100px" />
+        </a>
+        <div class="title-divider">
+          <h3>Soluciones</h3>
+          <small>Conectamos con lo que no ves</small>
+        </div>
+      </div>
+    
+      
+
+
+    </div>
+      <div class="items-header">
+        <div class="dropdown">
+          <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Seleccionar Tabla
+          </button>
+          <ul class="dropdown-menu">
+            <li onclick="conectarApi('menu')"><a class="dropdown-item" href="#">Menu</a></li>
+            <li onclick="conectarApi('caja')"><a class="dropdown-item" href="#">Caja</a></li>
+            <li onclick="conectarApi('costos')"><a class="dropdown-item" href="#">Costos</a></li>
+          </ul>
+        </div>
+        <button class="btn btn-info">Filtro 1</button>
+        <button class="btn btn-info">Filtro 2</button>
+        <button class="btn btn-info">Filtro 3</button>
+        <input class="form-control" type="text" placeholder="Busqueda por criterio" data-search />
+      </div>
+    </section>
+
+    <!--Listado de opciones y Tabla-->
+    <div class="father">
+      <section class="categorias">
+        <ul class="list-group list-group-flush">
+          <Li class="list-group-item rubros-header rounded"><h4>Rubros</h4></Li>
+          <li class="list-group-item btn btn-info rounded" >Comida</li>
+          <li class="list-group-item btn btn-info rounded">Bebida</li>
+          <li class="list-group-item btn btn-info rounded">Cocteleria</li>
+          <li class="list-group-item btn btn-info rounded">Cafeteria</li>
+          <li class="list-group-item btn btn-info rounded">Combos</li>
+          <li class="list-group-item btn btn-info rounded">Festejos</li>
+          <li class="list-group-item btn btn-info rounded">Sin Precio</li>
+        </ul>
+      </section>
+
+      <div class="pupito">
+        <table class="contenido rounded" id="tabla">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Venta ($)</th>
+              <th>Venta Competencia</th>
+              <th>Costo ($)</th>
+              <th>% Costo</th>
+              <th>% Objetivo</th>
+              <th>% Sugerido</th>
+              <th>$ Manual</th>
+              <th>Ventas (u)</th>
+              <th>Ganancia</th>
+              <th>Lista ($)</th>
+              <th>10% Off</th>
+              <th>20% Off</th>
+              <th>2x1</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-body">
+            <!-- Las filas se generarán dinámicamente aquí -->
+          </tbody>
+      </table>
+
+      </div>
+      
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
